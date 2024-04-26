@@ -1,0 +1,13 @@
+@import "../../assets/scss/config/_config";
+// override Slick Slider
+
+.slick-slider {
+	margin: 0 30px 40px 30px;
+}
+
+@media only screen and (min-width: 992px) {
+
+	.slick-slider {
+		margin: 0 -10px 40px -10px;
+	}
+}

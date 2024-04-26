@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"javascript.validate.enable": false,
+		"emmet.includeLanguages": {
+			"javascript": "javascriptreact",
+			"markdown": "html",
+			"ejs": "html"
+		},
+		"workbench.iconTheme": "material-icon-theme"
+	}
+}

@@ -1,0 +1,103 @@
+.formCompte {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 40px 60px;
+  border-radius: 10px;
+  min-width: 300px;
+  text-align: center;
+
+
+  .labelCompte {
+    margin-bottom: 4px;
+    color: rgb(27, 87, 102);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  select {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #33333305;
+    /* Couleur et style de la barre */
+    width: 150px;
+    /* Ajustez la largeur du champ de sélection */
+    margin-top: 10px;
+    /* Espace entre le champ de sélection et la barre */
+
+    option {
+      text-align: center;
+    }
+
+  }
+
+  #chek {
+    align-items: center;
+    color: #0d71e4;
+  }
+
+
+  h1 {
+    color: #243b55;
+    text-align: center;
+  }
+
+  .social-media {
+    margin-top: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    p {
+      padding: 15px;
+      width: 80px;
+      margin-left: 10px;
+      font-size: 30px;
+      text-align: center;
+      cursor: pointer;
+      color: #243b55;
+
+      i.fab.fa-facebook-f {
+        color: #3b5998;
+      }
+
+      i.fab.fa-youtube {
+        color: red;
+      }
+    }
+
+    &.choose-email {
+      text-align: center;
+      color: #243b55;
+    }
+
+    &.inscription {
+      text-align: right;
+      font-size: 10px;
+      margin-bottom: 20px;
+      color: #243b55;
+    }
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+
+    input[type="email"],
+    input[type="password"] {
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      outline: none;
+      margin-bottom: 15px;
+    }
+
+  }
+}

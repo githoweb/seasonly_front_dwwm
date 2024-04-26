@@ -1,0 +1,51 @@
+button,
+input,
+textarea,
+.btnStyle {
+  background: #fff;
+  border-radius: 3px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input {
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  display: inline-block;
+  margin: 0 10px 0 0;
+
+  &+label {
+    display: inline-block;
+  }
+}
+
+button,
+.btnStyle {
+  background: peru;
+  font-weight: bold;
+  color: #fff;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  aspect-ratio: 3 / 1;
+}
+
+label {
+  display: block;
+  margin: 0 0 5px 0;
+}
+
+.formInput {
+  margin: 0 0 1em 0;
+
+  &.formInput--aligned {
+    display: flex;
+    align-items: flex-start;
+  }
+}

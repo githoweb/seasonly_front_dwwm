@@ -1,0 +1,27 @@
+.benefits {
+  font-size: 0.75em;
+  margin: 2rem 0 0 0;
+  border-radius: 0.4rem;
+  padding: 1rem;
+
+  .benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .benefit {
+      width: calc(50% - 2rem);
+    }
+  }
+}
+
+.spotlight {
+  padding: 0 40px;
+  margin: 0 -5px;
+
+  
+
+  @media only screen and (min-width: 768px) {
+    padding: 0 80px;
+  }
+}

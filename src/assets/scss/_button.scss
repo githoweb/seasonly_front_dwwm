@@ -1,0 +1,76 @@
+$button_type: (
+  'default' : (
+    'background': #000,
+    'color': #eee
+  ),
+  'primary'   : (
+    'background': $primary-color,
+    'color': #fff
+  ),
+  'secondary'   : (
+    'background': $secondary-color,
+    'color': #fff
+  ),
+  'success'   : (
+    'background': $success-color,
+    'color': #fff
+  ),
+  'danger'   : (
+    'background': $danger-color,
+    'color': #fff
+  ),
+  'link'   : (
+    'background': transparent,
+    'color': #00F
+  )
+);
+
+$button_size: (
+  'sm' : (
+    'padding': 1,
+    'size': 1,
+    'height': 1
+  ),
+);
+
+// you can also use placeholders
+.btn {
+
+  font-family: $fontStackDefault;
+  position: relative;
+  display: inline-block;
+  font-weight: 300;
+  border-radius: $radius;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+  line-height: 1;
+
+  padding: #{map-get(map-get($button_size,'sm'),'padding')}em;
+  font-size: #{map-get(map-get($button_size,'sm'),'size')}em;
+}
+
+@each $key, $value in $button_type {
+
+  .btn_#{$key} {
+    background: #{map-get($value,'background')};
+    color: #{map-get($value,'color')};
+  }
+
+}
+
+@each $key, $value in $button_size {
+  .btn_#{$key} {
+    padding: #{map-get($value,'padding')}em;
+    font-size: #{map-get($value,'size')}em;
+    height: #{map-get($value,'height')}em;
+  }
+
+}
+
+.btn_disabled {
+  opacity: .5;
+  cursor: default;
+}

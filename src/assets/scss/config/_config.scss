@@ -1,0 +1,63 @@
+// WEBSITE CONFIG
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.13.0/css/all.css');
+
+
+// BREAKPOINTS VARIABLES
+//
+$screen-sm: 768px;  //45em !default; from portrait tablet
+$screen-md: 992px;  //62em !default; from landscape tablet
+$screen-lg: 1024px; //64em !default; from 1024 desktop
+
+// COLORS
+//
+
+$primary-color: #572;
+$secondary-color: peru;
+
+$success-color: #27ae60;
+$danger-color: #c0392b;
+
+$text-color: #333;
+$soft-color: #444;
+$insist-color: #000;
+$inverse-color: #ddd;
+$inverse-soft-color: #ccc;
+$inverse-insist-color: #fff;
+
+$link-color: #3333ff;
+$link-hover-color: darken($link-color, 15%);
+$insist-link-color : #005EA8;
+$insist-link-hover-color: darken($insist-link-color, 15%);
+$soft-link-color : #9B9B9B;
+$soft-link-hover-color: darken($soft-link-color, 15%);
+
+$bg: #FFF;
+$bg-soft: #DDD;
+$bg-inverse: #000;
+$bg-inverse-soft: #222;
+
+// Radius
+$radius : 5px;
+
+// FontStack
+$fontStackDefault: Arial, Sans-Serif; //Helvetica, Arial, Sans-Serif;
+$fontStackTitle: 'Roboto', $fontStackDefault;
+// /FontStack
+
+// scss file for font
+// @font-face {
+//   font-family: 'robotolight';
+//   src: url('../../fonts/roboto/roboto-light-webfont.eot');
+//   src: url('../../fonts/roboto/roboto-light-webfont.eot?#iefix') format('embedded-opentype'),
+//        url('../../fonts/roboto/roboto-light-webfont.woff') format('woff'),
+//        url('../../fonts/roboto/roboto-light-webfont.ttf') format('truetype'),
+//        url('../../fonts/roboto/roboto-light-webfont.svg#robotolight') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+@mixin box_shadow {
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
+}
+

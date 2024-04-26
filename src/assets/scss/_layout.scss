@@ -1,0 +1,47 @@
+#wrapper {
+  background: $bg;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+main {
+  padding: 155px 10px 10px 10px;
+
+  @media only screen and (min-width: 768px) {
+    padding: 2em 2em 2em 2em;
+    flex-grow: 1;
+  }
+}
+
+section {
+  margin: 20px 0 0 0;
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -10px;
+}
+
+
+
+
+@media only screen and (min-width: 1024px) {
+  #wrapper {
+    width: 1024px;
+    margin: auto;
+    flex-grow: 1;
+  }
+
+  section {
+    margin: 20px 0 0 0;
+  }
+
+  .cards-list {
+    gap: 10px;
+  }
+}

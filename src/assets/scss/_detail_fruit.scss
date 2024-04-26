@@ -1,0 +1,270 @@
+body {
+  h1 {
+    color: $secondary-color;
+  }
+
+  .calendar {
+    .calendar_content ul {
+      li {
+        &.active {
+          background: $secondary-color;
+        }
+      }
+    }
+
+    .months {
+      padding: 10px;
+      text-align: center;
+      color: #363;
+      font-weight: bold;
+
+      p {
+        margin: 0 0 0.5em 0;
+      }
+    }
+  }
+}
+
+.detail_item figure {
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+
+  border-radius: $radius;
+  overflow: hidden;
+  margin: 0 0 2em 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.detail_item {
+
+  figure {
+    aspect-ratio: 3 / 2;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin: 0 0 2px 0;
+
+    @media only screen and (min-width: 992px) {
+      margin: 0 0 1rem;
+    }
+  }
+
+  h3 {
+    font-weight: bold;
+    margin: 0 0 0.5rem;
+  }
+
+  .benefits {
+    margin: 2rem 0 0 0;
+  }
+
+  .benefits_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .benefit {
+      width: calc(50% - 2rem);
+    }
+  }
+}
+
+.calendar {
+  margin: 0 0 20px 0;
+  width: 100%;
+
+  .calendar_content ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media only screen and (min-width: 992px) {
+      flex-wrap: nowrap;
+      gap: 1px;
+      width: 100%;
+      margin: 2em 0 0 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 33.3333%;
+      height: 2em;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: #ddd;
+      border: 2px solid #fff;
+
+      span {
+        font-size: 1em;
+        text-align: center;
+        display: block;
+        opacity: 0.5;
+
+        @media only screen and (min-width: 992px) {
+          font-size: 0.9em;
+          position: absolute;
+          top: calc(-1em - 10px);
+          transform: translate(-50%);
+          left: 50%;
+          text-align: unset;
+        }
+      }
+
+      &.active {
+        color: #fff;
+
+        span {
+          opacity: 1;
+        }
+
+        @media only screen and (min-width: 992px) {
+          color: #000;
+        }
+      }
+
+      @media only screen and (min-width: 992px) {
+        flex-wrap: nowrap;
+        width: calc((100 / 12) * 100 * 1px);
+        border: none;
+      }
+
+
+    }
+  }
+
+  h2 {
+    background: #363;
+
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    padding: 5px;
+    position: relative;
+    z-index: 0;
+
+    @media only screen and (min-width: 992px) {
+      color: #000;
+    }
+
+    &::before,
+    &::after {
+      display: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 50%;
+      background: linear-gradient(to right, rgba(229, 167, 43, 1) 33%, rgba(87, 208, 229, 1) 59%, rgba(87, 208, 229, 1) 59%, rgba(224, 244, 252, 1) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+      @media only screen and (min-width: 992px) {
+        display: block;
+      }
+    }
+
+    &::after {
+      left: 0;
+      transform: rotate(180deg);
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.spotlight {
+  border-radius: 5px;
+  margin: 0 0 20px 0;
+
+  h2 {
+    text-align: center;
+  }
+
+  @media only screen and (min-width: 992px) {
+    padding: 20px 190px 20px 190px;
+    background: #dfd;
+  }
+}
+
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0 0;
+
+  @media only screen and (min-width: 992px) {
+    margin: 20px 0 0 0;
+  }
+
+}
+
+/* bouton anima */
+
+.actions button {
+  padding: 15px 20px;
+  border-radius: 10px;
+  align-items: center;
+  border: none;
+  font-size: 15px;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.actions span {
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.map {
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+
+  .detail_item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+
+    .visual {
+      width: calc(40% - 1em);
+    }
+
+    .content {
+      width: calc(60% - 1em);
+    }
+
+
+    figure {
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+  .map {
+    width: 50%;
+    margin: 0 auto;
+
+  }
+}

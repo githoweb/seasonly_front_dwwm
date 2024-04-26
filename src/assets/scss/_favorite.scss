@@ -1,0 +1,38 @@
+// Favorite is a React component
+.favorite {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 1.4em;
+
+  color: rgba(100, 100, 100, 0.5);
+    border: 2px solid rgba(100, 100, 100, 1);
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  &.active,
+    &:hover {
+      color: rgba(212, 2, 51, 1);
+      border: 2px solid rgba(50, 50, 50, 1);
+
+      &::before {
+        color: rgba(212, 2, 51, 1);
+        border: 2px solid rgba(212, 2, 51, 1);
+      }
+    }
+
+
+  // Favorite in context of Card B
+  .card-b & {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+}

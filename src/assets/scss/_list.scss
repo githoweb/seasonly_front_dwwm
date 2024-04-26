@@ -1,0 +1,43 @@
+$list_type: (
+  'list-bullet' : (
+    'symbol' : '\2022'
+  ),
+  'list-square' :(
+    'symbol' : '\25aa'
+  ),
+  'list-hyphen' : (
+    'symbol' : '-'
+  )
+);
+
+.list {
+
+  position: relative;
+
+  li {
+    position: relative;
+    padding-left: 15px;
+    margin: 5px 0;
+
+    &:before {
+      display: block;
+      position: absolute;
+      left: 0;
+      font-size: 20px;
+      color: $primary-color;
+      line-height: 1;
+      top: -3px;
+    }
+  }
+
+  @each $key, $value in $list_type {
+    &.#{$key} li:before {
+      content: "#{map-get($value, 'symbol')}";
+    }
+  }
+
+  &.list-hyphen li:before {
+    top: -6px;
+  }
+
+}

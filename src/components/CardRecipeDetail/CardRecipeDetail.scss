@@ -1,0 +1,106 @@
+@import "../../assets/scss/config/_config";
+
+.card-recipeDetail {
+  position: relative; 
+  border-radius: $radius;
+  margin: 0 0 10px 0;
+
+  figure {
+    
+
+    img {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+    }
+  }
+
+  .infos {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
+    padding: 10px;
+
+    span {
+      padding: 0 0 0 1em;
+    }
+  }
+
+  .socials {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    li {
+      margin: 0 0 20px 0;
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    
+  }
+  
+}
+
+@media only screen and (min-width: 992px) {
+
+  .card-recipeDetail {
+    margin: 0 0 20px 0;
+   
+    .infos {
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+  
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+  
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 5px;
+      padding: 10px;
+  
+      span {
+        padding: 0 0 0 1em;
+      }
+    }
+  
+    .socials {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+  
+      li {
+        margin: 0 0 20px 0;
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border-radius: 50%;
+  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      
+    }
+    
+  }
+}
+
+
+
+

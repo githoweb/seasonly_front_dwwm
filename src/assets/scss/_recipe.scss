@@ -1,0 +1,13 @@
+.recipe_pres {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+
+  .card-recipeDetail {
+    width: calc(60% - 1em);
+  }
+
+  .recipe_txt {
+    width: calc(40% - 1em);
+  }
+}

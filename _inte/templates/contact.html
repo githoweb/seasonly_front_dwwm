@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contact</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto">
+</head>
+
+<body>
+
+  <div id="wrapper">
+
+    <main>
+
+      <section>
+
+
+        <div class="centered-form">
+          <div class="form-container">
+            <h1>Contactez-nous</h1>
+
+            <form action="contact.php" method="post">
+              <label for="nom">Pseudo :</label><br>
+              <input type="text" id="nom" name="nom" required><br><br>
+
+              <label for="nom">Nom :</label><br>
+              <input type="text" id="nom" name="nom" required><br><br>
+
+              <label for="email">Email :</label><br>
+              <input type="email" id="email" name="email" required><br><br>
+
+              <label for="message">Message :</label><br>
+              <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+              <input type="checkbox" id="souscrire" name="souscrire" value="souscrire">
+              <label for="souscrire">J'autorise ce site à conserver mes données personnelles transmises via ce
+                formulaire.<br>Aucune exploitation commercial ne sera faite des données conservées.
+                <br>
+                Voir notre <a href="http://localhost:5173/_inte/templates/mentions_legales.html"
+                  target="_blank">Politique de gestion des données
+                  personnelles</a>
+              </label><br><br>
+
+              <input type="submit" value="Envoyer">
+            </form>
+
+            <div class="text-centrer">
+              <p>SEASOnly 33 Rosebery Paris</p>
+            </div>
+
+            <img src="../media/MAP.jpg" class="centered-image" alt="Paris">
+
+
+          </div>
+
+
+
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API&callback=initMap">
+          </script>
+
+        </div>
+  </div>
+  </div>
+
+  </section>
+  <!-- /section détail légume/fruit -->
+
+  <section>
+
+  </section>
+  <!-- /section recettes -->
+
+  </main>
+
+
+  <footer>
+
+  </footer>
+
+  </div>
+
+  <script type="module" src="../main.jsx"></script>
+</body>
+
+</html>

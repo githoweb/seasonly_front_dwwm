@@ -1,0 +1,69 @@
+// CSS Document  _BASE.HTML
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Noto Sans', sans-serif;
+	// font-size: 62.5%;// Pour avoir une base de 10 : calcul plus rapide
+
+	background: #eeeeee;
+
+}
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+  font-family: $fontStackDefault;
+  background: darken($primary-color, 20%);
+  line-height: 1.25;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	margin: 0 0 0.75em 0;
+}
+
+h1 {
+	font-size: 1.6rem;
+	color: $secondary-color;
+}
+
+h2 {
+	font-size: 1.4rem;
+	color: $primary-color;
+}
+
+h3 {
+	font-size: 1.4rem;
+}
+
+a{
+	text-decoration: none;
+	outline: none;
+	color: #363;
+
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+button {
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+p {
+	margin: 0 0 1em 0;
+}
+
+@media only screen and (min-width: 992px) {
+	h1 {
+		font-size: 1.8rem;
+	}
+}

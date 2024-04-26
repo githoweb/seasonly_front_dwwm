@@ -1,0 +1,40 @@
+// # configuration
+// Sass variables and Sass functions and mixins
+@import "./config/_config";
+
+// #Base
+@import "_reset";
+@import "_html";
+
+// #Layout
+@import "_layout";
+@import "_detail_fruit";
+// @import '_grid';
+
+@import "_forms";
+
+// #Components
+@import "_button";
+@import "_list";
+@import "favorite";
+
+@import "_home";
+@import "_contact";
+@import "_404";
+@import "_mentionlegale";
+@import "_login";
+@import "_compte";
+@import "_resetmdp";
+@import "profil";
+@import "recipe";
+
+// Libs overrides : don't touch this !
+// @import "_override_splide";
+@import "../../libs/slick";
+@import "../../libs/slick-theme";
+@import "_override_slick";
+
+
+//# Shame : after here are the scss selectors you don't know where to put
+
+@import "_debug";

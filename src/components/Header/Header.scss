@@ -1,0 +1,258 @@
+@import "../../assets/scss/config/_config";
+
+#header {
+  background: $primary-color;
+  padding: 10px;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+
+  &::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease 1s, transform 1s ease;
+  }
+
+  &.active::before {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+
+  .logo {
+    height: 50px;
+
+    max-height: 100%;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(100%);
+    z-index: 1;
+    text-align: center;
+    display: inline-block;
+    background: darken($primary-color, 20%);
+
+    transition: transform 0.5s ease;
+
+    &::before {
+      display: block;
+      content: 'Menu';
+      font-size: 1.5rem;
+      color: #fff;
+      padding: 20px;
+      background: #363;
+    }
+  }
+
+  &.active .menu {
+    transform: translateX(0%);
+  }
+
+  .user {
+    border-top: 1px solid #fff;
+    padding: 20px;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .userlinks {}
+
+  .logout {
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+    color: #fff;
+    margin: 10px;
+  }
+}
+
+
+form {
+  width: 100%;
+}
+
+input {
+  flex-grow: 1;
+  width: 100%;
+}
+
+
+
+.navbar {
+  width: 100%;
+
+
+  a {
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+  }
+
+  .navbar__item {
+    margin: 10px;
+  }
+}
+
+.openMenu,
+.closeMenu {
+  position: relative;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 35px;
+  padding: 5px;
+  cursor: pointer;
+
+  i {
+    display: block;
+    background: #fff;
+    width: 100%;
+    height: 3px;
+  }
+}
+
+.openMenu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeMenu {
+  position: absolute;
+  color: #fff;
+  font-size: 40px;
+
+}
+
+@media only screen and (min-width: 992px) {
+
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 20px;
+    position: static;
+
+    &.active::before {
+      display: none;
+    }
+
+    form {
+      width: auto;
+      flex-grow: 1;
+    }
+
+    .menu {
+      display: flex;
+      background: none;
+      transform: none;
+      position: static;
+      width: auto;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &.active .menu {
+
+      position: static;
+      width: auto;
+      background: none;
+      z-index: unset;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .user {
+      border-top: none;
+      padding: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .userlinks {
+        position: absolute;
+        display: none;
+
+        width: calc(100% + 80px);
+        background: #ADA;
+        color: #000;
+        top: calc(100% - 1px);
+        right: -10px;
+        text-align: center;
+        padding: 10px;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+
+        a {
+          color: #000;
+        }
+
+
+        li {
+          width: 100%;
+        }
+
+        .logout {
+          color: #000;
+        }
+
+
+      }
+
+      &:hover {
+
+        .userlinks {
+          display: block;
+        }
+      }
+
+      .username {
+        padding: 10px;
+        color: #fff;
+        cursor: pointer;
+        display: block;
+      }
+    }
+  }
+
+  .navbar {
+    display: flex;
+    width: auto;
+
+    ul {
+      align-items: center;
+      display: flex;
+    }
+
+    a {}
+
+    .navbar__item {
+      margin: 0;
+    }
+  }
+
+  .openMenu,
+  .closeMenu {
+    display: none;
+  }
+}

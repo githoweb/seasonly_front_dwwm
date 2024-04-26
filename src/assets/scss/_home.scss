@@ -1,0 +1,76 @@
+@import "../../assets/scss/config/_config";
+
+
+.chooseMonth {
+  margin: 1em auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #005500;
+
+  background-image: var(--background);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: 0 2px 2px #fff;
+  position: relative;
+  z-index: 0;
+
+  ::before {
+    display: block;
+    content: '';
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,ffffff+100&1+0,0+56 */
+    background: radial-gradient(ellipse at center 30%, rgba(255, 255, 255, 0.9) 0%, rgba(143, 143, 143, 0) 75%, rgba(255, 255, 255, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+
+
+  select {
+    position: relative;
+    padding: 1em 1em;
+    border-radius: $radius;
+    background: $primary-color;
+    color: #fff;
+    font-weight: bold;
+    // margin: 0 1em;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+
+    &::before {
+      width: 10px;
+      height: 2px;
+      display: block;
+      content: "";
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      right: 0;
+    }
+
+    
+  }
+
+  span {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+  .chooseMonth {
+    margin: 20px 0;
+    padding: 20px;
+  }
+
+
+}
